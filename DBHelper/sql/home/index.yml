@@ -1,0 +1,9 @@
+query_sensor_location_by_id: |
+  SELECT
+    location_name
+  FROM
+    sensor_locations
+  {% if id %}
+  WHERE
+    id = :id
+  {% endif %}
